@@ -99,23 +99,23 @@ class CartItem {
         this.title = product.title;
         this.pricePerUnit = product.price;
         this.count = count;
-        this.totalPrice = this.#calculatePrice();
+        this.totalPrice = this.#recalculateTotalPrice();
     }
 
     increaseCount(count = 1) {
         this.count += count;
-        this.totalPrice = this.#calculatePrice();
+        this.#recalculateTotalPrice();
     }
     decreaseCount(count = 1) {
         this.count -= count;
-        this.totalPrice = this.#calculatePrice();
+        this.#recalculateTotalPrice();
     }
     setCount(count) {
         this.count = count;
-        this.totalPrice = this.#calculatePrice();
+        this.#recalculateTotalPrice();
     }
-    #calculatePrice() {
-        return this.pricePerUnit * this.count;
+    #recalculateTotalPrice() {
+        this.totalPrice = this.pricePerUnit * this.count;
     }
     getCartItemBlock() {
         return ``; // меод возвращает html разметку елемента корзины
