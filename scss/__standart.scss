@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+button {
+  background-color: #00000000;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+html,
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul,
+ol {
+  list-style-type: none;
+}
+btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
