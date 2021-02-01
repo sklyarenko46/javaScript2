@@ -12,7 +12,7 @@ class ProductsHolder {
     }
 
     #fillDataOfProducts() {
-        this.#dataOfProduct = [
+        this.#dataOfProducts = [
             {id: 1, img: 'img/product1.jpg', title: 'Notebook', price: 20000},
             {id: 2, img: 'img/product2.jpg', title: 'Mouse', price: 1500},
             {id: 3, title: 'Keyboard', price: 5000},
