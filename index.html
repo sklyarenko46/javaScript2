@@ -7,9 +7,24 @@
 </head>
 <body>
 <div class="centring-content">
-    <div class="logo">Интернет-магазин</div>
     <header>
-        <button class="cart-btn" type="button">Корзина</button>
+        <section class="cap">
+            <h2 class="title">Интернет-магазин</h2>
+            <div class="cart-container">
+                <button class="cart-btn" type="button">Корзина (<span class="product-added-count">0</span>)</button>
+                <div class="cart cart-not-visible">
+                    <div class="cart-header">
+                        <p class="img-header">Изображение</p>
+                        <p class="title-header">Наименование</p>
+                        <p class="count-header">Кол-во</p>
+                        <p class="total-price-header">Стоимость</p>
+                        <p class="remove-header">Удалить</p>
+                    </div>
+                    <p>Итого: <span class="cart-total-price">0</span></p>
+                </div>
+            </div>
+
+        </section>
     </header>
     <main>
         <div class="products"></div>

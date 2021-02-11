@@ -389,36 +389,131 @@ btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:di
   width: 1400px;
 }
 
-header, main {
-  margin: 30px 0;
+.cap {
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #262626;
 }
-
-.logo {
+.cap .title {
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: white;
 }
 
-.cart-btn {
+.cart-container {
+  position: relative;
+}
+.cart-container .cart-btn {
   box-sizing: border-box;
   padding: 7px;
-  min-width: 100px;
-  min-height: 50px;
+  width: 150px;
+  height: 75px;
   background-color: white;
   color: darkgray;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 17px;
+  font-weight: 800;
   letter-spacing: 1.5px;
   border: 2px solid darkgray;
   transition: 0.5s;
 }
-.cart-btn:hover {
+.cart-container .cart-btn:hover {
   background-color: darkgray;
   color: black;
+}
+.cart-container .cart {
+  position: absolute;
+  top: 80px;
+  left: -360px;
+  z-index: 2;
+  transition: 0.3s;
+  background-color: white;
+  border: 2px solid darkgray;
+  width: 510px;
+  min-height: 100px;
+  padding: 5px;
+}
+.cart-container .cart .cart-header {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-container .cart .cart-header .img-header {
+  width: 100px;
+  text-align: center;
+}
+.cart-container .cart .cart-header .title-header {
+  width: 150px;
+  text-align: center;
+}
+.cart-container .cart .cart-header .count-header {
+  width: 75px;
+  text-align: center;
+}
+.cart-container .cart .cart-header .total-price-header {
+  width: 100px;
+  text-align: center;
+}
+.cart-container .cart .cart-header .remove-header {
+  width: 75px;
+  text-align: center;
+}
+.cart-container .cart .cart-item {
+  width: 500px;
+  height: 50px;
+  border-bottom: 5px solid darkred;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  transition: 0.4s;
+}
+.cart-container .cart .cart-item .cart-item-img {
+  width: 93px;
+  border-top: 2px solid darkred;
+  border-left: 5px solid darkred;
+  border-right: 2px solid darkred;
+}
+.cart-container .cart .cart-item .cart-item-title {
+  width: 150px;
+  overflow: hidden;
+  color: darkgray;
+  font-size: 12px;
+  padding: 3px;
+  text-align: center;
+  line-height: 50px;
+}
+.cart-container .cart .cart-item .cart-item-count {
+  width: 75px;
+  text-align: center;
+  line-height: 50px;
+}
+.cart-container .cart .cart-item .cart-item-total-price {
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+}
+.cart-container .cart .cart-item .cart-item-remove-btn {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 75px;
+  text-align: center;
+  line-height: 50px;
+}
+.cart-container .cart-visible {
+  opacity: 1;
+}
+.cart-container .cart-not-visible {
+  opacity: 0;
 }
 
 .products {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
   background-color: #434343;
